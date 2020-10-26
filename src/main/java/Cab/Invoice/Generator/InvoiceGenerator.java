@@ -14,23 +14,22 @@ public class InvoiceGenerator {
 	 */
 	public double calculateFare(double distance, int time) {
 		double totalfare = distance * MINIMUM_COST_PER_KILOMETER + time * COST_PER_TIME;
-		if (totalfare < MINIMUM_FARE) {
-			return MINIMUM_FARE;
-		}
-		return totalfare;
+		return Math.max(totalfare, MINIMUM_FARE);
 	}
 
 	/**
-	 * UC2 : calculates total fare of multiple rides
+	 * UC 2, 3 : calculates total fare of multiple rides and returning the invoice
+	 * generated
 	 * 
 	 * @param rides
 	 * @return
 	 */
-	public double calculateFare(Ride[] rides) {
+	public InvoiceSummary calculateFare(Ride[] rides) {
 		double totalFare = 0;
 		for (Ride ride : rides) {
 			totalFare += this.calculateFare(ride.distance, ride.time);
 		}
-		return totalFare;
+		InvoiceSummary invoiceSummary = new InvoiceSummary(rides.length, totalFare);
+		return invoiceSummary;
 	}
 }
