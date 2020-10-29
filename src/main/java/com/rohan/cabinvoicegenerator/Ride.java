@@ -1,4 +1,4 @@
-package Cab.Invoice.Generator;
+package com.rohan.cabinvoicegenerator;
 
 public class Ride {
 	public int time;

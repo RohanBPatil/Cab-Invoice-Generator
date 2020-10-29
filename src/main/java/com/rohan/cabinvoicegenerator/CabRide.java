@@ -1,4 +1,4 @@
-package Cab.Invoice.Generator;
+package com.rohan.cabinvoicegenerator;
 
 public enum CabRide {
 	NORMAL(10, 1, 5), PREMIUM(15, 2, 20);

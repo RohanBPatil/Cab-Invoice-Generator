@@ -1,4 +1,4 @@
-package Cab.Invoice.Generator;
+package com.rohan.cabinvoicegenerator;
 
 import static org.junit.jupiter.api.Assertions.*;
 

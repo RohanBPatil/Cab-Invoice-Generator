@@ -1,4 +1,4 @@
-package Cab.Invoice.Generator;
+package com.rohan.cabinvoicegenerator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
